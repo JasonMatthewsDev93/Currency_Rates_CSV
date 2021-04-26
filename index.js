@@ -19,9 +19,8 @@ async function dates(){
       })
     }
 
-    const csv = new ObjectsToCsv(arr);
-
-    await csv.toDisk('./test.csv', { allColumns: true });
+    const csv = new ObjectsToCsv(arr, { allColumns: true });
+    await csv.toDisk('./test.csv');
 }
 
 dates();
